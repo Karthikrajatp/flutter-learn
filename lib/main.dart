@@ -3,7 +3,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/home_page.dart';
 import 'package:flutter_application_1/pages/first_page.dart';
-import 'package:flutter_application_1/pages/second_page.dart';
 import 'package:flutter_application_1/pages/settings_page.dart';
 
 void main() {
