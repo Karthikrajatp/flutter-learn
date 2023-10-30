@@ -10,16 +10,16 @@ class FirstPage extends StatelessWidget {
       appBar: AppBar(title: const Text("1st Page")),
       body: Center(
         child: ElevatedButton(
-          child: const Text("Go To Second Page"),
-          onPressed: () {
-            //navigate to second page
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => const SecondPage(),
+            child: const Text("Go To Second Page"),
+            onPressed: () {
+              //navigate to second page
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const SecondPage(),
                 ),
-                );
-          }),
+              );
+            }),
       ),
     );
   }
