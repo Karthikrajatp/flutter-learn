@@ -3,11 +3,12 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  MyApp({Key? key}) : super(key: key);
+  final List names = ["Karthik","Naveen","Dharshan","Esanth","Sanjith","Raghu"];
 
   @override
   Widget build(BuildContext context) {
@@ -15,31 +16,12 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Colors.blue[100],
-        body: ListView(
-          scrollDirection: Axis.horizontal,
-          children: [
-            //1stBox
-            Container(
-              height: 350,
-              width: 200,
-              color: Colors.deepPurple,
-            ),
-
-            //2ndBox
-            Container(
-              height: 350,
-              width: 200,
-              color: Colors.deepPurple[400],
-            ),
-
-            //3rdBox
-            Container(
-              height: 350,
-              width: 200,
-              color: Colors.deepPurple[200],
-            ),
-          ],
-        ),
+        body: ListView.builder(
+          itemCount: names.length,
+          itemBuilder: (context,index) => ListTile(
+            title: Text(names[index]),
+          ),
+          ),
       ),
     );
   }
