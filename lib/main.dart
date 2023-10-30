@@ -15,34 +15,32 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Colors.blue[100],
-        body: Column(
+        body: ListView(
+          scrollDirection: Axis.horizontal,
           children: [
             //1stBox
-            Expanded(
-              child: Container(
-                color: Colors.deepPurple,
-                ),
+            Container(
+              height: 350,
+              width: 200,
+              color: Colors.deepPurple,
             ),
-            
+
             //2ndBox
-            Expanded(
-              flex: 2,
-              child: Container(
-                color: Colors.deepPurple[400],
-                ),
+            Container(
+              height: 350,
+              width: 200,
+              color: Colors.deepPurple[400],
             ),
 
             //3rdBox
-            Expanded(
-              child: Container(
-                color: Colors.deepPurple[200],
-                ),
-            )
-
+            Container(
+              height: 350,
+              width: 200,
+              color: Colors.deepPurple[200],
+            ),
           ],
-          ),
+        ),
       ),
     );
-  
-}
+  }
 }
