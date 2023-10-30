@@ -15,42 +15,33 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Colors.blue[100],
-        appBar: AppBar(
-          title: Text("My App Bar"),
-          backgroundColor: Colors.deepPurple,
-          elevation: 0,
-          leading: Icon(Icons.menu),
-          actions: [IconButton(onPressed:(){}, icon: Icon(Icons.logout))],
-        ),
-        body: Center(
-          child: Container(
-            height: 300,
-            width: 300,
-            decoration: BoxDecoration(
+        body: Column(
+          children: [
+            //1stBox
+            Container(
+              height: 200,
+              width: 200,
               color: Colors.deepPurple,
-              borderRadius: BorderRadius.circular(25),
-            ),
-            padding: EdgeInsets.all(25),
-            child: Column(
-              children: const [
-                Text(
-                  "Karthik Raja",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 28,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                Icon(
-                  Icons.favorite,
-                  color: Colors.white,
-                  size: 64,
-                ),
-              ],
-            ),
+              ),
+            
+            //2ndBox
+            Container(
+              height: 200,
+              width: 200,
+              color: Colors.deepPurple[400],
+              ),
+
+            //3rdBox
+            Container(
+              height: 200,
+              width: 200,
+              color: Colors.deepPurple[200],
+              )
+
+          ],
           ),
-        ),
       ),
     );
-  }
+  
+}
 }
