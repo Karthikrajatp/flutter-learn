@@ -18,25 +18,26 @@ class MyApp extends StatelessWidget {
         body: Column(
           children: [
             //1stBox
-            Container(
-              height: 200,
-              width: 200,
-              color: Colors.deepPurple,
-              ),
+            Expanded(
+              child: Container(
+                color: Colors.deepPurple,
+                ),
+            ),
             
             //2ndBox
-            Container(
-              height: 200,
-              width: 200,
-              color: Colors.deepPurple[400],
-              ),
+            Expanded(
+              flex: 2,
+              child: Container(
+                color: Colors.deepPurple[400],
+                ),
+            ),
 
             //3rdBox
-            Container(
-              height: 200,
-              width: 200,
-              color: Colors.deepPurple[200],
-              )
+            Expanded(
+              child: Container(
+                color: Colors.deepPurple[200],
+                ),
+            )
 
           ],
           ),
