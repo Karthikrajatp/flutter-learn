@@ -16,14 +16,20 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Colors.blue[100],
-        body: GridView.builder(
-          itemCount: 64,
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 8),
-           itemBuilder: (content,index)=>Container(
-            color: Colors.deepPurple,
-            margin: EdgeInsets.all(2),
-           ))
-      ),
+        body: Center(
+          child: GestureDetector(
+            onTap: () {
+              //do something
+            },
+            child: Container(
+              height: 200,
+              width:200,
+              color: Colors.deepPurple[300],
+              child: Center(child:Text("Thats me!")),
+            ),
+          ),
+        )
+      )
     );
   }
 }
